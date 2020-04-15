@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatrialModule } from './shared/matrial.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, HomeComponent],
+  declarations: [AppComponent, SidenavComponent, HomeComponent, ToolbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

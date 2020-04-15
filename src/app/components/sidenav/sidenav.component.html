@@ -2,7 +2,7 @@
   <mat-sidenav
     #sidenav
     opened="true"
-    mode="side"
+    mode="over"
     class="sidenav mat-elevation-z15"
   >
     <mat-toolbar class="sidenav-toolbar mat-elevation-z1" color="primary"
@@ -11,7 +11,7 @@
     Sidenav content
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
-    <!-- <app-toolbar></app-toolbar> -->
+    <app-toolbar></app-toolbar>
     <div class="wrapper">
       <router-outlet></router-outlet>
     </div>
