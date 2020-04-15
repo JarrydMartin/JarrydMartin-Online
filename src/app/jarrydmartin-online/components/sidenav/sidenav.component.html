@@ -1,1 +1,22 @@
-<app-toolbar></app-toolbar> <router-outlet></router-outlet>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #sidenav
+    [opened]="!isSmallScreen()"
+    [mode]="isSmallScreen() ? 'over' : 'side'"
+    class="sidenav mat-elevation-z15"
+  >
+    <mat-toolbar class="sidenav-toolbar mat-elevation-z1" color="primary"
+      >Projects</mat-toolbar
+    >
+    Sidenav content
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <app-toolbar
+      (toggleSidenav)="sidenav.toggle()"
+      [disableButton]="!isSmallScreen()"
+    ></app-toolbar>
+    <div class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
