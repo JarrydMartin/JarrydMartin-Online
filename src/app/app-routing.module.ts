@@ -10,6 +10,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'shopping-companion',
+    loadChildren: () =>
+      import('./shopping-companion/shopping-companion.module').then(
+        (m) => m.ShoppingCompanionModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'jarrydmartin-online',
   },
