@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "jarrydmartin-online"
+  },
+  "targets": {
+    "jarrydmartin-online": {
+      "hosting": {
+        "JarrydMartin-Online": [
+          "jarrydmartin-online"
+        ]
+      }
+    }
   }
 }

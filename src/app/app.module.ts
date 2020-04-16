@@ -10,6 +10,10 @@ import { MatrialModule } from './modules/shared/matrial.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ProjectlistComponent } from './components/project-list/project-list.component';
 import { ProjectListItemComponent } from './components/project-list-item/project-list-item.component';
+import { environment } from '../environments/environment';
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,8 @@ import { ProjectListItemComponent } from './components/project-list-item/project
     AppRoutingModule,
     BrowserAnimationsModule,
     MatrialModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

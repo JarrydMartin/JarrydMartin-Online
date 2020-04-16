@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProjectItem } from 'src/app/models/project-item';
-import { HomeComponent } from '../home/home.component';
-import { link } from 'fs';
 
 @Component({
   selector: 'app-project-list',

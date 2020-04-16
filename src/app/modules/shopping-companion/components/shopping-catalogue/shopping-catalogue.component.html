@@ -1,1 +1,5 @@
-<p>shopping-catalogue works!</p>
+<ul>
+  <li *ngFor="let item of shoppingListItems | async">
+    {{ item.name }} - ${{ item.price }}
+  </li>
+</ul>
