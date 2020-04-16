@@ -1,0 +1,26 @@
+<mat-card>
+  <a routerLink="/shopping-companion">
+    <button mat-icon-button color="primary">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </a>
+  <br />
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Name </mat-label>
+      <input matInput name="name" [(ngModel)]="newShoppingCatalogueItem.name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Price </mat-label>
+      <input
+        matInput
+        name="price"
+        [(ngModel)]="newShoppingCatalogueItem.price"
+      />
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" type="submit" name="sumbit">
+      Add
+    </button>
+  </form>
+</mat-card>

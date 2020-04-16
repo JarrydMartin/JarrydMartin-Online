@@ -5,6 +5,7 @@ import {
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { ShoppingItem } from '../models/shopping-item';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +20,21 @@ export class ShoppingCatalogueService {
   }
 
   getShoppingCatalogueItems(): Observable<ShoppingItem[]> {
-    return this.shoppingListCollection.valueChanges();
+    return this.shoppingListCollection.snapshotChanges().pipe(
+      map((actions) =>
+        actions.map((a) => {
+          const data = a.payload.doc.data() as ShoppingItem;
+          const id = a.payload.doc.id;
+          return { id, ...data };
+        })
+      )
+    );
+  }
+
+  addShoppingCatalogueItems(newShoppingCatalogueItem: ShoppingItem): void {
+    newShoppingCatalogueItem.id = this.firestore.createId();
+    this.shoppingListCollection
+      .doc(newShoppingCatalogueItem.id)
+      .set(Object.assign({}, newShoppingCatalogueItem));
   }
 }

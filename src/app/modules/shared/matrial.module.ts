@@ -7,6 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -19,6 +21,8 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatCardModule,
     MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     MatSidenavModule,
@@ -29,6 +33,8 @@ import { MatListModule } from '@angular/material/list';
     LayoutModule,
     MatCardModule,
     MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
 })
 export class MatrialModule {}
