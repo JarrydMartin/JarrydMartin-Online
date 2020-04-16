@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [],
@@ -17,6 +18,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     LayoutModule,
     MatCardModule,
+    MatListModule,
   ],
   exports: [
     MatSidenavModule,
@@ -26,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     LayoutModule,
     MatCardModule,
+    MatListModule,
   ],
 })
 export class MatrialModule {}
