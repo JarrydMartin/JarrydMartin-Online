@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "JarrydMartin-Online",
       "public": "dist/JarrydMartin-Online",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
