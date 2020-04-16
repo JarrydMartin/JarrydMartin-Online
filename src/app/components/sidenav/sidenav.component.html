@@ -8,7 +8,7 @@
     <mat-toolbar class="sidenav-toolbar mat-elevation-z1" color="primary"
       >Projects</mat-toolbar
     >
-    <app-project-list></app-project-list>
+    <app-project-list (closeSidenav)="sidenav.close()"></app-project-list>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
     <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>

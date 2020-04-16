@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ProjectItem } from 'src/app/models/project-item';
+import { HomeComponent } from '../home/home.component';
+import { link } from 'fs';
 
 @Component({
   selector: 'app-project-list',
@@ -6,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-list.component.scss'],
 })
 export class ProjectlistComponent implements OnInit {
+  @Output() closeSidenav: EventEmitter<void> = new EventEmitter();
+  projectItems: ProjectItem[];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.projectItems = [
+      {
+        name: 'Home',
+        link: '',
+      },
+      {
+        name: 'Shopping Companion',
+        link: '/shopping-companion',
+      },
+    ];
+  }
 }

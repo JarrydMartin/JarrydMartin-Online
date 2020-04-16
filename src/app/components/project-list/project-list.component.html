@@ -1,12 +1,7 @@
 <mat-list role="list">
-  <mat-list-item role="listitem">
-    <button mat-button>
-      <a routerLink=""> Home </a>
-    </button>
-  </mat-list-item>
-  <mat-list-item role="listitem">
-    <button mat-button>
-      <a routerLink="/shopping-companion"> Shopping Companion</a>
-    </button>
-  </mat-list-item>
+  <app-project-list-item
+    *ngFor="let projectItem of projectItems"
+    [projectItem]="projectItem"
+    (closeSidenav)="closeSidenav.emit()"
+  ></app-project-list-item>
 </mat-list>

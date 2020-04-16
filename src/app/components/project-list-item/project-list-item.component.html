@@ -1,1 +1,5 @@
-<p>project-list-item works!</p>
+<mat-list-item role="listitem">
+  <button mat-button (click)="closeSidenav.emit()">
+    <a routerLink="{{ projectItem.link }}"> {{ projectItem.name }} </a>
+  </button>
+</mat-list-item>
