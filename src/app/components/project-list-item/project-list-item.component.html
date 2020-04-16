@@ -1,5 +1,7 @@
 <mat-list-item role="listitem">
-  <button mat-button (click)="closeSidenav.emit()">
-    <a routerLink="{{ projectItem.link }}"> {{ projectItem.name }} </a>
-  </button>
+  <a routerLink="{{ projectItem.link }}">
+    <button mat-button (click)="closeSidenav.emit()">
+      {{ projectItem.name }}
+    </button>
+  </a>
 </mat-list-item>
